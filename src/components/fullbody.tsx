@@ -7,7 +7,6 @@ const Fullbody = () => {
         maxWidth: "100%",
         display: "flex",
         justifyContent: "center",
-
         gap: 5,
         margin: 5,
         overflow: "hidden",
