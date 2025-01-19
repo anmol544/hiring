@@ -8,13 +8,11 @@ import {
   Box,
   styled,
   InputBase,
- 
 } from "@mui/material";
-import ApartmentIcon from '@mui/icons-material/Apartment';
+import ApartmentIcon from "@mui/icons-material/Apartment";
 import SearchIcon from "@mui/icons-material/Search";
 
-
-const name="John";
+const name = "John";
 // Create a custom styled input for the search bar
 const Search = styled("div")({
   position: "relative",
@@ -72,7 +70,10 @@ const Navbar = () => {
           >
             <Box sx={{ display: "flex", alignItems: "center", gap: 10 }}>
               {/* Logo */}
-                <ApartmentIcon fontSize="large" sx={{'&:hover': { color: 'black',},   }} />
+              <ApartmentIcon
+                fontSize="large"
+                sx={{ "&:hover": { color: "black" } }}
+              />
               {/* Search Bar */}
               <Search>
                 <SearchIconWrapper>
@@ -86,7 +87,8 @@ const Navbar = () => {
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
               {/* Avatar on the right */}
-              <Avatar title="Profile"
+              <Avatar
+                title="Profile"
                 sx={{
                   transition: "transform 0.2s ease-in-out", // Smooth transition
                   "&:hover": {

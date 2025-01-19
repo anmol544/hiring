@@ -1,25 +1,60 @@
+import Box from "@mui/material/Box";
 
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-
-const Fullbody = ()=> {
+const Fullbody = () => {
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start',  gap:10 ,margin:5 }}>
-      <Box sx={{ width: '400px', height: '200vh',  borderRadius: '10px',border:1,padding:2 }}>       
+    <Box
+      sx={{
+        maxWidth: "100%",
+        display: "flex",
+        justifyContent: "center",
+
+        gap: 5,
+        margin: 5,
+        overflow: "hidden",
+        flexDirection: {
+          xs: "column",
+          sm: "column", // Stack vertically on small screens (sm)
+          md: "row", // Side by side on larger screens (md and above)
+        },
+      }}
+    >
+      <Box
+        sx={{
+          height: "200vh",
+          borderRadius: "10px",
+          border: 1,
+          padding: 2,
+          width: {
+            xs: "80vw",
+            sm: "80vw", // Stack vertically on small screens (xs)
+            md: "40vw", // Side by side on larger screens (sm and above)
+          },
+        }}
+      >
         <h1>Full Body Content</h1>
-        {" Add your content here" }
+        {" Add your content here"}
       </Box>
-      
-      <Box sx={{ width: '400px', height: '70pxh',  borderRadius: '10px', border:1,padding:2,'@media (max-width: 600px)':{  display: 'none',} }}>
-        <h1>Full Body Content</h1>
-        {" Add your content here" }
+
+      <Box
+        sx={{
+          height: 500,
+          borderRadius: "10px",
+          border: 1,
+          padding: 2,
+
+          width: {
+            xs: "80vw",
+            sm: "80vw", // Stack vertically on small screens (xs)
+            md: "40vw", // Side by side on larger screens (sm and above)
+            l: "35vw",
+            xl: "30vw",
+          },
+        }}
+      >
+        <h1>Second Body</h1>
+        {" Add your content here"}
       </Box>
-  
     </Box>
-    );
-    };
-    export default Fullbody;
+  );
+};
+export default Fullbody;
